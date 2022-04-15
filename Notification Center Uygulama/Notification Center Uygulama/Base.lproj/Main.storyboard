@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Notification_Center_Uygulama" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xl4-yw-ppm">
+                                <rect key="frame" x="186" y="224" width="42" height="17.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAS-6N-byx">
+                                <rect key="frame" x="185.5" y="432.5" width="43" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Git"/>
+                                <connections>
+                                    <segue destination="vtr-wQ-sUI" kind="presentation" id="lxL-b9-aKt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gAS-6N-byx" firstAttribute="top" secondItem="Xl4-yw-ppm" secondAttribute="bottom" constant="191" id="3Sx-DS-ZMJ"/>
+                            <constraint firstItem="gAS-6N-byx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7vA-ef-hta"/>
+                            <constraint firstItem="gAS-6N-byx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="e55-mp-n1g"/>
+                            <constraint firstItem="Xl4-yw-ppm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mLb-T5-ytx"/>
+                            <constraint firstItem="Xl4-yw-ppm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="180" id="v6P-bn-Who"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="labelSonuc" destination="Xl4-yw-ppm" id="Mbf-Ll-Dof"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13.043478260869566" y="86.383928571428569"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="ccy-DB-t9m">
+            <objects>
+                <viewController id="vtr-wQ-sUI" customClass="ViewController2" customModule="Notification_Center_Uygulama" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ILG-rm-2pd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLn-zq-uVu">
+                                <rect key="frame" x="145" y="405.5" width="124" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Bildirim Gönder"/>
+                                <connections>
+                                    <action selector="gonder:" destination="vtr-wQ-sUI" eventType="touchUpInside" id="G8l-oS-L4y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KhL-iX-fVt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GLn-zq-uVu" firstAttribute="centerY" secondItem="ILG-rm-2pd" secondAttribute="centerY" id="bmA-Dc-pdm"/>
+                            <constraint firstItem="GLn-zq-uVu" firstAttribute="centerX" secondItem="ILG-rm-2pd" secondAttribute="centerX" id="cDE-SK-Ak1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gfv-7K-43K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="686" y="86"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
